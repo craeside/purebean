@@ -1,0 +1,38 @@
+<div class="product__meta {% if for_mobile %}hidden-lap-and-up{% else %}hidden-pocket{% endif %}">
+  {%- if settings.product_show_vendor and product.vendor != blank -%}
+    <h2 class="product__brand text--uppercase">
+      {%- assign vendor_handle = product.vendor | handle -%}
+      {%- assign collection_for_vendor = collections[vendor_handle] -%}
+
+      {%- if collection_for_vendor.empty? -%}
+        {%- assign url_for_vendor = product.vendor | url_for_vendor -%}
+      {%- else -%}
+        {%- assign url_for_vendor = collection_for_vendor.url -%}
+      {%- endif -%}
+
+      <a href="{{ url_for_vendor }}">{{ product.vendor }}</a>
+    </h2>
+  {%- endif -%}
+
+  <h1 class="product__title {% if template.name == 'product' %}h2{% else %}h4{% endif %}">{{ product.title }}</h1>
+
+
+  <div class="product__price-info" style="display: {% if product.selected_or_first_available_variant.unit_price_measurement %}block{% else %}none{% endif %}">
+    <div class="unit-price-measurement">
+      <span class="unit-price-measurement__price">{{ product.selected_or_first_available_variant.unit_price | money_without_trailing_zeros }}</span>
+      <span class="unit-price-measurement__separator">/ </span>
+
+      <span class="unit-price-measurement__reference-value" {%- if product.selected_or_first_available_variant.unit_price_measurement.reference_value == 1 -%}style="display: none"{% endif %}>
+        {{- product.selected_or_first_available_variant.unit_price_measurement.reference_value -}}
+      </span>
+
+      <span class="unit-price-measurement__reference-unit">{{ product.selected_or_first_available_variant.unit_price_measurement.reference_unit }}</span>
+    </div>
+  </div>
+
+  {%- if section.settings.reviews_enabled -%}
+    <div class="product__review-badge">
+      <span class="shopify-product-reviews-badge" data-id="{{ product.id }}">{{ 'product.general.loading_reviews' | t }}</span>
+    </div>
+  {%- endif -%}
+</div>

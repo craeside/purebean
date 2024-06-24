@@ -1,0 +1,134 @@
+{%- assign text_font_600 = settings.text_font | font_modify: 'weight', '600' -%}
+{%- assign text_font_bold = settings.text_font | font_modify: 'weight', 'bolder' -%}
+{%- assign text_font_italic = settings.text_font | font_modify: 'style', 'italic' -%}
+{%- assign text_font_bold_italic = text_font_bold | font_modify: 'style', 'italic' -%}
+
+<style>
+  @font-face {
+    font-family: "icomoon";
+    src: url({{ 'icomoon.eot' | asset_url }});
+    src: url({{ 'icomoon.eot?#iefix' | asset_url }}) format("embedded-opentype"), url({{ 'icomoon.woff2' | asset_url }}) format("woff2"), url({{ 'icomoon.ttf' | asset_url }}) format("truetype"), url({{ 'icomoon.woff' | asset_url }}) format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  {{ settings.heading_font | font_face }}
+  {{ settings.slideshow_heading_font | font_face }}
+  {{ settings.text_font | font_face }}
+  {{ text_font_bold | font_face }}
+  {{ text_font_italic | font_face }}
+  {{ text_font_bold_italic | font_face }}
+
+  {% if text_font_600 %}
+    {{ text_font_600 | font_face }}
+  {% endif %}
+
+  :root {
+    /* TYPOGRAPHY */
+    --text-font-bolder-weight: {% if text_font_600 %}600{% else %}bolder{% endif %};
+    --heading-font-family: {{settings.heading_font.family}}, {{ settings.heading_font.fallback_families }};
+    --heading-font-weight: {{settings.heading_font.weight}};
+    --heading-font-style: {{settings.heading_font.style}};
+    --text-font-family: {{settings.text_font.family}}, {{ settings.text_font.fallback_families }};
+    --text-font-weight: {{settings.text_font.weight}};
+    --text-font-style: {{settings.text_font.style}};
+    --slideshow-heading-font-family : {{settings.slideshow_heading_font.family}}, {{ settings.slideshow_heading_font.fallback_families }};
+    --slideshow-heading-font-weight : {{settings.slideshow_heading_font.weight}};
+    --slideshow-heading-font-style  : {{settings.slideshow_heading_font.style}};
+    --font-size-factor : {{settings.font_size}};
+
+    /* COLORS */
+    --background          : {{settings.background}};
+    --background-rgb      : {{settings.background | color_extract: 'red'}}, {{settings.background | color_extract: 'green'}}, {{settings.background | color_extract: 'blue'}};
+    --secondary-background: {{settings.secondary_background}};
+    --heading-color       : {{settings.heading_color}};
+    --heading-color-rgb   : {{settings.heading_color | color_extract: 'red'}}, {{settings.heading_color | color_extract: 'green'}}, {{settings.heading_color | color_extract: 'blue'}};
+    --text-color          : {{settings.text_color}};
+    --text-color-rgb      : {{settings.text_color | color_extract: 'red'}}, {{settings.text_color | color_extract: 'green'}}, {{settings.text_color | color_extract: 'blue'}};
+    --light-text-color    : {{settings.light_text_color}};
+    --light-text-color-rgb: {{settings.light_text_color | color_extract: 'red'}}, {{settings.light_text_color | color_extract: 'green'}}, {{settings.light_text_color | color_extract: 'blue'}};
+    --accent-color        : {{settings.accent_color}};
+    --darken-accent-color : {{settings.accent_color | color_darken: 15}};
+    --accent-color-rgb    : {{settings.accent_color | color_extract: 'red'}}, {{settings.accent_color | color_extract: 'green'}}, {{settings.accent_color | color_extract: 'blue'}};
+    --border-color        : {{settings.light_text_color | color_modify: 'alpha', 0.4}};
+    --primary-button-color       : {{settings.primary_button_color}};
+    --primary-button-background  : {{settings.primary_button_background}};
+    --darken-primary-button-background : {{settings.primary_button_background | color_darken: 15}};
+    --secondary-button-color     : {{settings.secondary_button_color}};
+    --secondary-button-background: {{settings.secondary_button_background}};
+    --lighten-secondary-button-background : {{settings.secondary_button_background | color_lighten: 15}};
+
+    --product-features-color              : {{ settings.product_features_color }};
+    --product-features-background         : {{ settings.product_features_background }};
+    --product-on-sale-label-background    : {{ settings.product_on_sale_label_background }};
+    --product-on-sale-label-color         : #ffffff;
+    --product-unavailable-label-background: {{ settings.product_unavailable_label_background }};
+    --product-unavailable-label-color     : #ffffff;
+  }
+
+  {% if settings.secondary_background_pattern != blank %}
+    .template-product .product-recommendations,
+    .page__container--secondary .main {
+      background-image: url({{ settings.secondary_background_pattern | img_url: 'grande' }});
+      background-repeat: repeat;
+    }
+  {% endif %}
+
+  {%- assign accent_lightness = settings.accent_color | color_extract: 'lightness' -%}
+
+  {%- if accent_lightness > 30 -%}
+    .accent-overlay {
+      background-blend-mode: multiply;
+      background-color: var(--accent-color) !important;
+    }
+
+    .collection__image,
+    .slideshow--anchor .slideshow__media-container::after {
+      mix-blend-mode: multiply;
+    }
+  {%- else -%}
+    .accent-overlay::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(var(--accent-color-rgb), 0.55);
+    }
+
+    .collection__image,
+    .slideshow--anchor .slideshow__media-container::after {
+      mix-blend-mode: screen;
+    }
+  {%- endif -%}
+
+  @media screen and (min-width: 560px) and (max-width: 800px) {
+    {%- if settings.search_mode == 'product' -%}
+      .header-search__products .grid__cell:nth-child(4) {
+        display: none;
+      }
+    {%- else -%}
+      .header-search__products .grid__cell:nth-child(3),
+      .header-search__products .grid__cell:nth-child(4) {
+        display: none;
+      }
+    {%- endif -%}
+  }
+
+  @media screen and (min-width: 560px) {
+    {%- if settings.search_mode == 'product' -%}
+      .header-search__products + .header-search__see-more[data-results-count="3"] {
+        display: none;
+      }
+    {%- endif -%}
+  }
+
+  @media screen and (min-width: 801px) {
+    {%- if settings.search_mode == 'product' -%}
+      .header-search__products + .header-search__see-more[data-results-count="4"] {
+        display: none;
+      }
+    {%- endif -%}
+  }
+</style>

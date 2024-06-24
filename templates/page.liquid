@@ -1,0 +1,20 @@
+{%- assign force_secondary_background = true -%}
+
+<div class="page__content-wrapper">
+  <div class="side-nav">
+    <div class="page__header">
+      <h1 class="page__title h1">{{ page.title }}</h1>
+    </div>
+  {% for link in linklists.about.links %}
+<a href="{{ link.url }}">{{ link.title }}</a>
+{% endfor %}
+</div>
+  <div class="container">
+
+    <div class="box box--shrinked">
+      <div class="box__content box__content--large-padding rte">
+        {{ page.content }}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+{% section 'product-template' %}
+{% section 'product-recommendations' %}
+
+<script>
+  window.ShopifyXR=window.ShopifyXR||function(){(ShopifyXR.q=ShopifyXR.q||[]).push(arguments)};
+  ShopifyXR('setModels', {{ product.media | where: 'media_type', 'model' | json }});
+</script>

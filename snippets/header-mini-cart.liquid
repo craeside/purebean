@@ -1,0 +1,106 @@
+<form action="{{ routes.cart_url }}" method="post" novalidate class="mini-cart" tabindex="-1" data-cart-item-count="{{ cart.item_count }}">
+  <div class="mini-cart__inner {% if cart.item_count == 0 %}mini-cart__inner--centered{% endif %}">
+    {%- if cart.item_count > 0 -%}
+      <div class="mini-cart__items">
+        {%- for line_item in cart.items -%}
+          <div class="mini-cart__item-wrapper">
+            <input type="hidden" name="updates[]" value="{{ line_item.quantity }}" data-id="{{ line_item.key }}">
+
+            <div class="mini-cart__item mini-cart-item">
+              <div class="mini-cart-item__image-container">
+                <img class="mini-cart-item__image" src="{{ line_item.image | img_url: '250x250' }}" alt="{{ line_item.title | escape }}">
+              </div>
+
+              <div class="mini-cart-item__info">
+                {%- if settings.product_show_vendor -%}
+                  <h4 class="mini-cart-item__vendor text--uppercase">{{ line_item.vendor }}</h4>
+                {%- endif -%}
+
+                <h3 class="mini-cart-item__title h6">
+                  <a href="{{ line_item.url }}">{{ line_item.product.title }}</a>
+                </h3>
+
+                {%- if line_item.variant.title != 'Default Title' -%}
+                  <p class="mini-cart-item__variant">{{ line_item.variant.title }}</p>
+                {%- endif -%}
+
+                {%- if line_item.line_level_discount_allocations != blank -%}
+                  <ul class="mini-cart-item__discount-list">
+                    {%- for discount_allocation in line_item.line_level_discount_allocations -%}
+                      <li class="mini-cart-item__discount">
+                        {%- render 'icon' with 'sale' -%}{{ discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money }})
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+              </div>
+
+              <div class="mini-cart-item__price-container">
+                <span class="mini-cart-item__price mini-cart-item__line-price" data-money-convertible>{{ line_item.final_line_price | money }}</span>
+
+                {%- if line_item.original_line_price != line_item.final_line_price -%}
+                  <span class="mini-cart-item__price mini-cart-item__line-price mini-cart-item__price--old" data-money-convertible>{{ line_item.original_line_price | money }}</span>
+                {%- endif -%}
+
+                {%- if line_item.unit_price_measurement -%}
+                  <div class="unit-price-measurement">
+                    <span class="unit-price-measurement__price">{{ line_item.unit_price | money_without_trailing_zeros }}</span>
+                    <span class="unit-price-measurement__separator">/ </span>
+
+                    {%- if line_item.unit_price_measurement.reference_value != 1 -%}
+                      <span class="unit-price-measurement__reference-value">{{ line_item.unit_price_measurement.reference_value }}</span>
+                    {%- endif -%}
+
+                    <span class="unit-price-measurement__reference-unit">{{ line_item.unit_price_measurement.reference_unit }}</span>
+                  </div>
+                {%- endif -%}
+              </div>
+
+              <div class="mini-cart-item__remove-container" data-action="remove-line-item" data-variant-id="{{ line_item.variant_id }}">
+                <a href="{{ routes.cart_change_url }}?quantity=0&line={{ forloop.index }}" title="{{ 'cart.items.delete' | t }}">
+                  {%- render 'icon' with 'cross' -%}
+                </a>
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+
+      <div class="mini-cart__bottom">
+        <div class="mini-cart__total">
+          <div class="mini-cart__image-container-spacer"></div>
+
+          <div class="mini-cart__total-label-container">
+            <span class="text--uppercase text--uppercase-secondary mini-cart__total-label">{{ 'cart.mini_cart.total' | t }}</span>
+          </div>
+
+          <div class="mini-cart__total-price-container">
+            {%- if cart.cart_level_discount_applications != blank -%}
+              <ul class="mini-cart__discount-list">
+                {%- for discount_application in cart.cart_level_discount_applications -%}
+                  <li class="mini-cart__discount">
+                    {% render 'icon' with 'sale' %} {{ discount_application.title }} (-{{ discount_application.total_allocated_amount | money }})
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+
+            <span class="mini-cart-item__price mini-cart__total-price" data-money-convertible>{{ cart.total_price | money }}</span>
+          </div>
+
+          <div class="mini-cart__remove-container-spacer"></div>
+        </div>
+
+        <div class="mini-cart__buttons">
+          <a href="/collections/all-products" class="button button--secondary">Continue Shopping</a>
+          <button type="submit" name="checkout" class="button button--primary">{{ 'cart.mini_cart.checkout' | t }}</button>
+        </div>
+      </div>
+    {%- else -%}
+      <div class="mini-cart__empty-state">
+        <p>{{ 'cart.mini_cart.empty_text' | t }}</p>
+        <a class="button button--primary button--full" href="{{ settings.empty_cart_link }}">{{ 'cart.mini_cart.empty_button' | t }}</a>
+      </div>
+    {%- endif -%}
+  </div>
+</form>
