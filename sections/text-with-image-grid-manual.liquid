@@ -1,0 +1,165 @@
+<section class="section section--positioned section-{{ section.id }}">
+  <div class="container">
+    {%- if section.settings.background_image and section.settings.title_position == 'left' -%}
+      <img data-src="{{ section.settings.background_image | img_url: '800x800' }}"
+           alt="{{ section.settings.background_image.alt | escape }}"
+           class="image-below-box image-below-box--pull image-below-box--horizontal-ratio lazyload image--fade-in">
+    {%- endif -%}
+
+    <div class="box box--with-image">
+      {%- capture section_title -%}
+        <div class="container_flex">
+        <div class="column">
+        <div class="box__image box__image--small image-background">
+          {%- if section.settings.image1 -%}
+            <div class="image-background__image lazyload image--fade-in" data-bg="{{ section.settings.image1 | img_url: '700x700' }})"></div>
+
+            <noscript>
+              <div class="image-background__image" style="background-image: url({{ section.settings.image1 | img_url: '700x700' }})"></div>
+            </noscript>
+          {%- endif -%}
+        </div>
+      </div>
+      <div class="column vertical container_flex">
+        <div class="box__image box__image--small image-background">
+          {%- if section.settings.image1 -%}
+            <div class="image-background__image lazyload image--fade-in" data-bg="{{ section.settings.image2 | img_url: '700x700' }})"></div>
+
+            <noscript>
+              <div class="image-background__image" style="background-image: url({{ section.settings.image2 | img_url: '700x700' }})"></div>
+            </noscript>
+          {%- endif -%}
+        </div>
+        <div class="box__image box__image--small image-background">
+          {%- if section.settings.image1 -%}
+            <div class="image-background__image lazyload image--fade-in" data-bg="{{ section.settings.image3 | img_url: '700x700' }})"></div>
+
+            <noscript>
+              <div class="image-background__image" style="background-image: url({{ section.settings.image3 | img_url: '700x700' }})"></div>
+            </noscript>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+      {%- endcapture -%}
+
+      {%- capture section_content -%}
+        <div class="box__content box__content--large-padding">
+          <hr class="box__separator hidden-thumb">
+
+          <div class="rte">
+            <h2 class="section__title h3">{{ section.settings.subheader }}</h2>
+            {{ section.settings.content }}
+
+            {%- if section.settings.button_text != blank -%}
+              <a href="{{ section.settings.button_link }}" class="box__callout-button button button--primary">{{ section.settings.button_text | escape }}</a>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endcapture -%}
+
+      {%- if section.settings.title_position == 'left' -%}
+        {{ section_title }}
+        {{ section_content }}
+      {%- else -%}
+        {{ section_content }}
+        {{ section_title }}
+      {%- endif -%}
+    </div>
+
+    {%- if section.settings.background_image and section.settings.title_position == 'right' -%}
+      <img data-src="{{ section.settings.background_image | img_url: '800x800' }}"
+           alt="{{ section.settings.background_image.alt | escape }}"
+           class="image-below-box image-below-box--pull image-below-box--horizontal-ratio lazyload image--fade-in">
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Text with image grid",
+  "class": "shopify-section__featured-text",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image1",
+      "label": "Image1",
+      "info": "600 x 600px jpg recommended"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "Image2",
+      "info": "600 x 600px jpg recommended"
+    },
+    {
+      "type": "image_picker",
+      "id": "image3",
+      "label": "Image3",
+      "info": "600 x 600px jpg recommended"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Your title"
+    },
+    {
+      "type": "select",
+      "id": "title_position",
+      "label": "Image position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_overlay",
+      "label": "Show accent tint on image",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "subheader",
+      "label": "Subheader",
+      "default": "Your title"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Text",
+      "default": "<p>Add your own custom content to give more information about your store, availability details...</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Secondary image",
+      "info": "800 x 800px png with transparency recommended - this will be displayed only on large screens."
+    }
+  ],
+  "presets": [
+    {
+      "category": "Text",
+      "name": "Text with image grid"
+    }
+  ]
+}
+{% endschema %}
