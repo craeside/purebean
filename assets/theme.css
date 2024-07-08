@@ -4563,7 +4563,7 @@ select::-ms-expand {
   font-size: 12px;
   font-weight: var(--text-font-bolder-weight);
   color: var(--background);
-  line-height: 0;
+  line-height: 1em;
   background-color: #f06723;
   border-radius: 50%;
   padding: 4px;
