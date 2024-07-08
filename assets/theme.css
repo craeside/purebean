@@ -4555,18 +4555,18 @@ select::-ms-expand {
 
 .header__cart-count {
   position: absolute;
-  width: 2.5em;
-  height: auto;
-  top: -11px;
-  right: -14px;
+  width: 1.8em;
+  height: 1.8em;
+  top: -14px;
+  right: -19px;
   text-align: center;
-  font-size: 8px;
+  font-size: 12px;
   font-weight: var(--text-font-bolder-weight);
   color: var(--background);
   line-height: 0;
   background-color: #f06723;
   border-radius: 50%;
-  padding: 8px;
+  padding: 4px;
 }
 
 .header__cart-count-wrapper .header__cart-count {
