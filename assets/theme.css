@@ -2953,7 +2953,7 @@ h6:last-child {
   position: relative;
   display: inline-block;
   padding: 14px 30px;
-  line-height: normal;
+  line-height: 100%;
   border: none;
   border-radius: 0;
   text-transform: uppercase;
@@ -3050,7 +3050,7 @@ h6:last-child {
 
 @media screen and (min-width: 560px) {
   .button {
-    padding: 16px 34px 15px 34px;
+    padding: 15px 34px 16px 34px;
     font-size: 16px;
   }
 
