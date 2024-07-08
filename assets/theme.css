@@ -9322,7 +9322,7 @@ h1.collection__title, p.collection__description {
 
 /* mobile tweaks */
 
-@media screen and (max-width: 1010px) {
+@media screen and (max-width: 1040px) {
 .product__payment-container {
   display: flex;
   }
