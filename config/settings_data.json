@@ -50,6 +50,18 @@
               "position": "left"
             }
           },
+          "slideshow-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/PB-Coffee_Africa_Yirgacheffe_Dark_Bag_WhiteBG.webp",
+              "subheading": "Single Origin",
+              "heading": "ETHIOPIA YIRGACHEFFE",
+              "heading_color": "#f06723",
+              "button_text": "Shop Now",
+              "link": "shopify:\/\/products\/ethipian-sidamo",
+              "position": "left"
+            }
+          },
           "slideshow-1": {
             "type": "image",
             "settings": {
@@ -73,25 +85,13 @@
               "link": "shopify:\/\/products\/fireside-blend",
               "position": "left"
             }
-          },
-          "slideshow-0": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/PB-Coffee_Africa_Yirgacheffe_Dark_Bag_WhiteBG.webp",
-              "subheading": "Single Origin",
-              "heading": "ETHIOPIA YIRGACHEFFE",
-              "heading_color": "#f06723",
-              "button_text": "Shop Now",
-              "link": "shopify:\/\/products\/ethipian-sidamo",
-              "position": "left"
-            }
           }
         },
         "block_order": [
           "08c8a2cf-f23a-44de-bfdb-f5221fae8939",
+          "slideshow-0",
           "slideshow-1",
-          "829ddb30-a8cb-484c-bf2a-58c55127a72a",
-          "slideshow-0"
+          "829ddb30-a8cb-484c-bf2a-58c55127a72a"
         ],
         "settings": {
           "type": "full_width",
