@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "heading_color": "#0c0c0d",
@@ -28,10 +28,10 @@
     "font_size": "0",
     "slideshow_heading_font": "cabin_n4",
     "product_show_vendor": false,
-    "social_facebook": "https:\/\/www.facebook.com\/purebeanroasters",
-    "social_twitter": "https:\/\/twitter.com\/PureBeanCoffee1",
-    "social_instagram": "https:\/\/www.instagram.com\/purebean\/",
-    "favicon": "shopify:\/\/shop_images\/PBR_Logo_2020_WEB_Color_600.png",
+    "social_facebook": "https://www.facebook.com/purebeanroasters",
+    "social_twitter": "https://twitter.com/PureBeanCoffee1",
+    "social_instagram": "https://www.instagram.com/purebean/",
+    "favicon": "shopify://shop_images/PBR_Logo_2020_WEB_Color_600.png",
     "top_bar_color": "#ffffff",
     "top_bar_background": "#0c0c0d",
     "sections": {
@@ -41,48 +41,48 @@
           "08c8a2cf-f23a-44de-bfdb-f5221fae8939": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/PB-Coffee_Seasonal_Southside_Bag.jpg",
-              "subheading": "Fall Seasonal",
-              "heading": "Southside Blend",
+              "image": "shopify://shop_images/PB-Coffee_Seasonal_Brumal_Bag.jpg",
+              "subheading": "Winter Seasonal",
+              "heading": "Brumal Blend",
               "heading_color": "#f06723",
               "button_text": "Shop Now",
-              "link": "shopify:\/\/collections\/featured-coffees",
+              "link": "shopify://collections/featured-coffees",
               "position": "left"
             }
           },
           "slideshow-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/PB-Coffee_Africa_Yirgacheffe_Dark_Bag_WhiteBG.webp",
+              "image": "shopify://shop_images/PB-Coffee_Africa_Yirgacheffe_Dark_Bag_WhiteBG.webp",
               "subheading": "Single Origin",
               "heading": "ETHIOPIA YIRGACHEFFE",
               "heading_color": "#f06723",
               "button_text": "Shop Now",
-              "link": "shopify:\/\/products\/ethipian-sidamo",
+              "link": "shopify://products/ethipian-sidamo",
               "position": "left"
             }
           },
           "slideshow-1": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/coffee-beans-texture.jpg",
+              "image": "shopify://shop_images/coffee-beans-texture.jpg",
               "subheading": "442 blend",
               "heading": "ethi0pia, colombia, png",
               "heading_color": "#ffffff",
               "button_text": "Shop Now",
-              "link": "shopify:\/\/products\/442-blend",
+              "link": "shopify://products/442-blend",
               "position": "left"
             }
           },
           "829ddb30-a8cb-484c-bf2a-58c55127a72a": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/coffee-beans-from-above.jpg",
+              "image": "shopify://shop_images/coffee-beans-from-above.jpg",
               "subheading": "FIRESIDE Blend",
               "heading": "PNG & ethiopia",
               "heading_color": "#ffffff",
               "button_text": "Shop Now",
-              "link": "shopify:\/\/products\/fireside-blend",
+              "link": "shopify://products/fireside-blend",
               "position": "left"
             }
           }
@@ -102,14 +102,14 @@
       "text-with-optional-image": {
         "type": "text-with-optional-image",
         "settings": {
-          "image": "shopify:\/\/shop_images\/purebean_india_kids2.jpg",
+          "image": "shopify://shop_images/purebean_india_kids2.jpg",
           "title": "",
           "title_position": "right",
           "show_overlay": false,
-          "content": "<p><strong>Our community<\/strong><\/p><p>Our customers love coffee as much as us.<\/p>",
+          "content": "<p><strong>Our community</strong></p><p>Our customers love coffee as much as us.</p>",
           "button_text": "see more",
-          "button_link": "shopify:\/\/pages\/about-us",
-          "background_image": "shopify:\/\/shop_images\/PB-Coffee-Bag_PNG_Namugo_Front_White.jpg"
+          "button_link": "shopify://pages/about-us",
+          "background_image": "shopify://shop_images/PB-Coffee-Bag_PNG_Namugo_Front_White.jpg"
         }
       },
       "collection-list": {
@@ -175,21 +175,21 @@
             "type": "testimonial",
             "settings": {
               "title": "Author name",
-              "quote": "<p>Share what your customers are saying about your products, your company...<\/p>"
+              "quote": "<p>Share what your customers are saying about your products, your company...</p>"
             }
           },
           "testimonial-1": {
             "type": "testimonial",
             "settings": {
               "title": "Author name",
-              "quote": "<p>Share what your customers are saying about your products, your company...<\/p>"
+              "quote": "<p>Share what your customers are saying about your products, your company...</p>"
             }
           },
           "testimonial-2": {
             "type": "testimonial",
             "settings": {
               "title": "Author name",
-              "quote": "<p>Share what your customers are saying about your products, your company...<\/p>"
+              "quote": "<p>Share what your customers are saying about your products, your company...</p>"
             }
           }
         },
@@ -208,7 +208,7 @@
         "settings": {
           "popup_enabled": false,
           "popup_heading": "Popup",
-          "popup_content": "<p>You can use this popup to display some useful information to your customers.<\/p>",
+          "popup_content": "<p>You can use this popup to display some useful information to your customers.</p>",
           "popup_show_newsletter": false,
           "popup_delay": 5,
           "popup_only_on_index": true,
@@ -231,7 +231,7 @@
         "type": "header",
         "settings": {
           "show_tall_header": false,
-          "logo": "shopify:\/\/shop_images\/PBR_Logo_2020_WEB_Color_600.png",
+          "logo": "shopify://shop_images/PBR_Logo_2020_WEB_Color_600.png",
           "logo_max_width": 80,
           "logo_position": "left",
           "navigation_menu": "main-menu",
@@ -284,7 +284,7 @@
         "type": "rich-text",
         "settings": {
           "title": "Who we are",
-          "text": "<p>Pure Bean is a specialty boutique air roaster. Our beans are ethically sourced and hand-selected from the worlds finest coffee regions. You will notice the enhanced flavor nuances and low acidity with your very first taste. Our passion is to roast the highest quality coffee and to give back to those in need. We ship to customers and coffee shops across the United States.<\/p>",
+          "text": "<p>Pure Bean is a specialty boutique air roaster. Our beans are ethically sourced and hand-selected from the worlds finest coffee regions. You will notice the enhanced flavor nuances and low acidity with your very first taste. Our passion is to roast the highest quality coffee and to give back to those in need. We ship to customers and coffee shops across the United States.</p>",
           "text_position": "center"
         }
       },
@@ -294,7 +294,7 @@
           "title": "Featured Coffee's",
           "collection": "featured-coffees",
           "button_text": "Shop all",
-          "button_link": "shopify:\/\/collections\/featured-coffees",
+          "button_link": "shopify://collections/featured-coffees",
           "grid_items_per_row": 3,
           "grid_items_count": 3,
           "show_color_swatch": true,
@@ -304,16 +304,16 @@
       "1603499442dd903796": {
         "type": "text-with-image-grid",
         "settings": {
-          "image1": "shopify:\/\/shop_images\/rooftop-crowd-cheers-for-sun.jpg",
-          "image2": "shopify:\/\/shop_images\/happy-couple-having-coffee.jpg",
-          "image3": "shopify:\/\/shop_images\/coffee-date.jpg",
+          "image1": "shopify://shop_images/rooftop-crowd-cheers-for-sun.jpg",
+          "image2": "shopify://shop_images/happy-couple-having-coffee.jpg",
+          "image3": "shopify://shop_images/coffee-date.jpg",
           "title": "Your title",
           "title_position": "right",
           "show_overlay": false,
           "subheader": "Our Community",
-          "content": "<p>Our customers love coffee as much as us.<\/p>",
+          "content": "<p>Our customers love coffee as much as us.</p>",
           "button_text": "See more",
-          "button_link": "https:\/\/www.instagram.com\/purebeancoffeehouse\/"
+          "button_link": "https://www.instagram.com/purebeancoffeehouse/"
         }
       },
       "product-template": {
@@ -366,8 +366,7 @@
           "product-features-1",
           "product-features-2"
         ],
-        "settings": {
-        }
+        "settings": {}
       },
       "product-recommendations": {
         "type": "product-recommendations",
@@ -465,26 +464,22 @@
         },
         "text-with-optional-image": {
           "type": "text-with-optional-image",
-          "settings": {
-          }
+          "settings": {}
         },
         "collection-list": {
           "type": "collection-list",
           "blocks": {
             "collection-0": {
               "type": "collection",
-              "settings": {
-              }
+              "settings": {}
             },
             "collection-1": {
               "type": "collection",
-              "settings": {
-              }
+              "settings": {}
             },
             "collection-2": {
               "type": "collection",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -492,13 +487,11 @@
             "collection-1",
             "collection-2"
           ],
-          "settings": {
-          }
+          "settings": {}
         },
         "image-with-text-overlay": {
           "type": "image-with-text-overlay",
-          "settings": {
-          }
+          "settings": {}
         },
         "featured-collection": {
           "type": "featured-collection",
@@ -511,18 +504,15 @@
           "blocks": {
             "testimonial-0": {
               "type": "testimonial",
-              "settings": {
-              }
+              "settings": {}
             },
             "testimonial-1": {
               "type": "testimonial",
-              "settings": {
-              }
+              "settings": {}
             },
             "testimonial-2": {
               "type": "testimonial",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -530,8 +520,7 @@
             "testimonial-1",
             "testimonial-2"
           ],
-          "settings": {
-          }
+          "settings": {}
         },
         "featured-blog": {
           "type": "featured-article",
@@ -546,8 +535,7 @@
           "block_order": [
             "blog"
           ],
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "content_for_index": [
@@ -614,26 +602,22 @@
         },
         "text-with-optional-image": {
           "type": "text-with-optional-image",
-          "settings": {
-          }
+          "settings": {}
         },
         "collection-list": {
           "type": "collection-list",
           "blocks": {
             "collection-0": {
               "type": "collection",
-              "settings": {
-              }
+              "settings": {}
             },
             "collection-1": {
               "type": "collection",
-              "settings": {
-              }
+              "settings": {}
             },
             "collection-2": {
               "type": "collection",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -641,8 +625,7 @@
             "collection-1",
             "collection-2"
           ],
-          "settings": {
-          }
+          "settings": {}
         },
         "image-with-text-overlay": {
           "type": "image-with-text-overlay",
@@ -661,18 +644,15 @@
           "blocks": {
             "testimonial-0": {
               "type": "testimonial",
-              "settings": {
-              }
+              "settings": {}
             },
             "testimonial-1": {
               "type": "testimonial",
-              "settings": {
-              }
+              "settings": {}
             },
             "testimonial-2": {
               "type": "testimonial",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -680,8 +660,7 @@
             "testimonial-1",
             "testimonial-2"
           ],
-          "settings": {
-          }
+          "settings": {}
         },
         "featured-blog": {
           "type": "featured-article",
@@ -696,8 +675,7 @@
           "block_order": [
             "blog"
           ],
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "content_for_index": [
