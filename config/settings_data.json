@@ -413,7 +413,14 @@
       "collection-list",
       "1603499442dd903796",
       "160434729652a628ac"
-    ]
+    ],
+    "blocks": {
+      "17824471530847535147": {
+        "type": "shopify://apps/web-accessibility-by-accessibe/blocks/accessiBe/149b77a2-0170-42f6-9355-0bef39587b09",
+        "disabled": false,
+        "settings": {}
+      }
+    }
   },
   "presets": {
     "Gold": {
