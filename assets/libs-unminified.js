@@ -1757,8 +1757,7 @@
             (t.prototype.initADA = function () {
                 var t = this;
                 t.$slides.add(t.$slideTrack.find(".slick-cloned")).attr({ "aria-hidden": "true", tabindex: "-1" }).find("a, input, button, select").attr({ tabindex: "-1" }),
-                    t.$slideTrack.attr("role", "listbox"),
-                    t.$slideTrack.attr("aria-label;", "slideshow"),
+                    t.$slideTrack.attr({role: "listbox", "aria-label": "carousel"});
                     t.$slides.not(t.$slideTrack.find(".slick-cloned")).each(function (i) {
                         e(this).attr("role", "option");
                         var o = t.options.centerMode ? i : Math.floor(i / t.options.slidesToShow);
