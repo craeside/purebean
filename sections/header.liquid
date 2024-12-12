@@ -1,12 +1,13 @@
 {%- capture header_logo -%}
+  <h1 class="header__logo {% if section.settings.logo != blank %}header__logo--image{% endif %} {% if section.settings.logo_position == 'center' %}header__logo--centered{% endif %}">
     <a class="header__logo-link" href="{{ routes.root_url }}">
       {%- if section.settings.logo != blank -%}
         {%- capture image_size -%}{{ section.settings.logo_max_width | replace: 'px', '' }}x{%- endcapture -%}
 
-        <img class="header__logo-image header__logo-image--desktop {% if section.settings.mobile_logo != blank %}hidden-thumb{% endif %}"
+{% comment %}         <img class="header__logo-image header__logo-image--desktop {% if section.settings.mobile_logo != blank %}hidden-thumb{% endif %}"
              src="{{ section.settings.logo | img_url: image_size }}"
              srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
-             alt="{{ section.settings.logo.alt | default: shop.name }}">
+             alt="{{ section.settings.logo.alt | default: shop.name }}"> {% endcomment %}
 
         {%- if section.settings.mobile_logo -%}
           <img class="header__logo-image header__logo-image--mobile hidden-handheld-and-up"
