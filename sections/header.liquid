@@ -1,5 +1,4 @@
 {%- capture header_logo -%}
-  <h1 class="header__logo {% if section.settings.logo != blank %}header__logo--image{% endif %} {% if section.settings.logo_position == 'center' %}header__logo--centered{% endif %}">
     <a class="header__logo-link" href="{{ routes.root_url }}">
       {%- if section.settings.logo != blank -%}
         {%- capture image_size -%}{{ section.settings.logo_max_width | replace: 'px', '' }}x{%- endcapture -%}
