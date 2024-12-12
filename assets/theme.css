@@ -4726,8 +4726,10 @@ select::-ms-expand {
 }
 
 .header__link:hover > .nav-dropdown,
+.header__link:focus > .nav-dropdown,
 .header__link--focused > .nav-dropdown,
-.nav-dropdown__item:hover > .nav-dropdown {
+.nav-dropdown__item:hover > .nav-dropdown,
+.nav-dropdown__item:focus > .nav-dropdown {
   visibility: visible;
   opacity: 1;
   transition: opacity 0.2s ease-in-out, visibility 0s ease-in-out;
