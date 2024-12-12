@@ -95,7 +95,7 @@
         ],
         "settings": {
           "type": "full_width",
-          "autoplay": true,
+          "autoplay": false,
           "cycle_speed": 7
         }
       },
