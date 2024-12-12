@@ -12,7 +12,7 @@
   <nav class="header__main-nav {% if section.settings.logo_position == 'left' %}header__main-nav--stretched{% endif %}">
     <ul class="header__links list--unstyled">
       {%- for link in main_menu.links -%}
-        <li class="header__link {% if link.links != blank %}header__link--need-extra-space{% endif %}" {% if link.links != blank %}aria-haspopup="true"{% endif %} tabindex>
+        <li class="header__link {% if link.links != blank %}header__link--need-extra-space{% endif %}" {% if link.links != blank %}aria-haspopup="true"{% endif %} tabindex="-1">
           <a href="{{ link.url }}" class="link">{{- link.title | escape -}} {% if link.links != blank %}{% render 'icon' with 'dropdown-arrow' %}{% endif %}</a>
 
           {%- if link.links != blank -%}
