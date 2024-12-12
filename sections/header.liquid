@@ -62,9 +62,9 @@
         <nav class="header__secondary-nav">
           <ul class="header__links list--unstyled" role="menubar">
             {%- if shop.customer_accounts_enabled -%}
-              <li class="header__link hidden-pocket">
+              <li class="header__link hidden-pocket" role="none">
                 {%- if customer -%}
-                  <a href="{{ routes.account_url }}" class="link">{{ 'layout.header.account' | t }}</a>
+                  <a href="{{ routes.account_url }}" role="menuitem" class="link">{{ 'layout.header.account' | t }}</a>
                 {%- else -%}
                   <a href="{{ routes.account_login_url }}" class="link">{{ 'layout.header.login' | t }}</a>
                 {%- endif -%}
