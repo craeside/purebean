@@ -12,7 +12,7 @@
   <nav class="header__main-nav {% if section.settings.logo_position == 'left' %}header__main-nav--stretched{% endif %}">
     <ul class="header__links list--unstyled">
       {%- for link in main_menu.links -%}
-        <li class="header__link {% if link.links != blank %}header__link--need-extra-space{% endif %}" {% if link.links != blank %}aria-haspopup="true"{% endif %} tabindex="-1">
+        <li class="header__link {% if link.links != blank %}header__link--need-extra-space{% endif %}" {% if link.links != blank %}aria-haspopup="true"{% endif %}>
           <a href="{{ link.url }}" class="link">{{- link.title | escape -}} {% if link.links != blank %}{% render 'icon' with 'dropdown-arrow' %}{% endif %}</a>
 
           {%- if link.links != blank -%}
@@ -44,8 +44,8 @@
             {%- else -%}
               <ul class="nav-dropdown nav-dropdown--first list--unstyled">
                 {%- for sub_link in link.links -%}
-                  <li class="nav-dropdown__item">
-                    <a href="{{ sub_link.url }}" class="nav-dropdown__link" {% if sub_link.links != blank %}aria-haspopup="true"{% endif %}>
+                  <li class="nav-dropdown__item" {% if sub_link.links != blank %}aria-haspopup="true"{% endif %}>
+                    <a href="{{ sub_link.url }}" class="nav-dropdown__link">
                       {{- sub_link.title | escape -}} {% if sub_link.links != blank %}{% render 'icon' with 'next' %}{% endif %}
                     </a>
 
