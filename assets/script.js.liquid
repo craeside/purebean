@@ -2456,7 +2456,7 @@ router.route('(:lang)', function(pattern) {
         dots: false,
         arrow: true,
         pauseOnHover: false,
-        accessibility: true,
+        accessibility: false,
         adaptiveHeight: true,
         useTransform: true,
         useCSS: true,
