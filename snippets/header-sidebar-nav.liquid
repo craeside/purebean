@@ -8,7 +8,7 @@
           <a href="{{ link.url }}" class="sidebar-nav__link sidebar-nav__link--has-sub-links sidebar-nav__link--level-1">
             {{- link.title | escape -}}
 
-            <div class="plus-button-container" data-action="toggle-mobile-sub-menu" aria-haspopup="true" aria-expanded="{% if section.settings.mobile_expand_nav_first_level %}true{% else %}false{% endif %}">
+            <div class="plus-button-container" data-action="toggle-mobile-sub-menu" aria-haspopup="true" aria-label="expand" aria-checked="false" role="switch" aria-expanded="{% if section.settings.mobile_expand_nav_first_level %}true{% else %}false{% endif %}">
               <span class="plus-button {% if section.settings.mobile_expand_nav_first_level %}plus-button--active{% endif %}"></span>
             </div>
           </a>
