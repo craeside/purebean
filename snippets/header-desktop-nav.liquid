@@ -42,7 +42,7 @@
                 {%- endfor -%}
               </div>
             {%- else -%}
-              <ul class="nav-dropdown nav-dropdown--first">
+              <ul class="nav-dropdown nav-dropdown--first list--unstyled">
                 {%- for sub_link in link.links -%}
                   <li class="nav-dropdown__item">
                     <a href="{{ sub_link.url }}" class="nav-dropdown__link" {% if sub_link.links != blank %}aria-haspopup="true"{% endif %}>
@@ -50,7 +50,7 @@
                     </a>
 
                     {%- if sub_link.links != blank -%}
-                      <ul class="nav-dropdown nav-dropdown--second">
+                      <ul class="nav-dropdown nav-dropdown--second list--unstyled">
                         {%- for sub_sub_link in sub_link.links -%}
                           <li class="nav-dropdown__item">
                             <a href="{{ sub_sub_link.url }}" class="nav-dropdown__link link">{{ sub_sub_link.title | escape }}</a>
