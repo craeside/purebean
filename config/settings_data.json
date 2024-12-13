@@ -267,12 +267,19 @@
             "settings": {
               "menu_linklist": "about"
             }
+          },
+          "links_Em3wKU": {
+            "type": "links",
+            "settings": {
+              "menu_linklist": "privacy"
+            }
           }
         },
         "block_order": [
           "footer-1",
           "dba1d975-eefd-4117-b8f7-f1d0b6dea94e",
-          "3e1c8978-d094-489e-b962-d3843ba526a0"
+          "3e1c8978-d094-489e-b962-d3843ba526a0",
+          "links_Em3wKU"
         ],
         "settings": {
           "show_payment_methods": false,
