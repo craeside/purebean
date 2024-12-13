@@ -12,7 +12,7 @@
   <nav class="header__main-nav {% if section.settings.logo_position == 'left' %}header__main-nav--stretched{% endif %}">
     <ul class="header__links list--unstyled">
       {%- for link in main_menu.links -%}
-        <li class="header__link {% if link.links != blank %}header__link--need-extra-space{% endif %}" {% if link.links != blank %}aria-haspopup="true"{% endif %} tabindex>
+        <li class="header__link {% if link.links != blank %}header__link--need-extra-space{% endif %}" {% if link.links != blank %}aria-haspopup="true" tabindex="-1"{% endif %}>
           <a href="{{ link.url }}" class="link">{{- link.title | escape -}} {% if link.links != blank %}{% render 'icon' with 'dropdown-arrow' %}{% endif %}</a>
 
           {%- if link.links != blank -%}
@@ -42,25 +42,25 @@
                 {%- endfor -%}
               </div>
             {%- else -%}
-              <div class="nav-dropdown nav-dropdown--first">
+              <ul class="nav-dropdown nav-dropdown--first list--unstyled">
                 {%- for sub_link in link.links -%}
-                  <div class="nav-dropdown__item">
-                    <a href="{{ sub_link.url }}" class="nav-dropdown__link" {% if sub_link.links != blank %}aria-haspopup="true"{% endif %}>
+                  <li class="nav-dropdown__item header__link" {% if sub_link.links != blank %}aria-haspopup="true" tabindex="-1"{% endif %}>
+                    <a href="{{ sub_link.url }}" class="nav-dropdown__link">
                       {{- sub_link.title | escape -}} {% if sub_link.links != blank %}{% render 'icon' with 'next' %}{% endif %}
                     </a>
 
                     {%- if sub_link.links != blank -%}
-                      <div class="nav-dropdown nav-dropdown--second">
+                      <ul class="nav-dropdown nav-dropdown--second list--unstyled">
                         {%- for sub_sub_link in sub_link.links -%}
-                          <div class="nav-dropdown__item">
+                          <li class="nav-dropdown__item header__link">
                             <a href="{{ sub_sub_link.url }}" class="nav-dropdown__link link">{{ sub_sub_link.title | escape }}</a>
-                          </div>
+                          </li>
                         {%- endfor -%}
-                      </div>
+                      </ul>
                     {%- endif -%}
-                  </div>
+                  </li>
                 {%- endfor -%}
-              </div>
+              </ul>
             {%- endif -%}
           {%- endif -%}
         </li>

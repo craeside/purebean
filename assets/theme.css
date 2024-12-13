@@ -4702,11 +4702,21 @@ select::-ms-expand {
   position: absolute;
   padding: 15px 0;
   background: var(--background);
-  visibility: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 1px;
   opacity: 0;
   transition: opacity 0.2s ease-in-out, visibility 0s 0.2s ease-in-out;
   border: 1px solid var(--border-color);
   white-space: nowrap;
+}
+
+.nav-dropdown__item.header__link {
+  margin-left: 0;
+  display: block;
 }
 
 .nav-dropdown--first {
@@ -4726,10 +4736,17 @@ select::-ms-expand {
 }
 
 .header__link:hover > .nav-dropdown,
+.header__link:focus > .nav-dropdown,
 .header__link--focused > .nav-dropdown,
-.nav-dropdown__item:hover > .nav-dropdown {
-  visibility: visible;
+.nav-dropdown__item:hover > .nav-dropdown,
+.nav-dropdown__item:focus > .nav-dropdown {
   opacity: 1;
+  clip: auto ;
+  clip-path: none;
+  height: auto;
+  white-space: normal;
+  overflow: visible;
+  width: max-content;
   transition: opacity 0.2s ease-in-out, visibility 0s ease-in-out;
 }
 
@@ -4752,7 +4769,7 @@ select::-ms-expand {
 }
 
 .nav-dropdown--first > .nav-dropdown__item:hover > .nav-dropdown__link {
-  color: var(--heading-color);
+  color: var(--accent-color);
 }
 
 .mega-nav {

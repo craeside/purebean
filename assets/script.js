@@ -2456,14 +2456,14 @@ router.route('(:lang)', function(pattern) {
         dots: false,
         arrow: true,
         pauseOnHover: false,
-        accessibility: false,
+        accessibility: true,
         adaptiveHeight: true,
         useTransform: true,
         useCSS: true,
         autoplay: (slideshow.attr('data-autoplay') === 'true'),
         autoplaySpeed: parseInt(slideshow.attr('data-cycle-speed')),
-        prevArrow: '<button class="fs-slideshow__nav-button fs-slideshow__nav-prev slick-prev"><svg class="icon icon-arrow-left"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-left"></use></svg></button>',
-        nextArrow: '<button class="fs-slideshow__nav-button fs-slideshow__nav-next slick-next"><svg class="icon icon-arrow-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-right"></use></svg></button>'
+        prevArrow: '<button aria-label="previous" class="fs-slideshow__nav-button fs-slideshow__nav-prev slick-prev"><svg class="icon icon-arrow-left"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-left"></use></svg></button>',
+        nextArrow: '<button aria-label="next" class="fs-slideshow__nav-button fs-slideshow__nav-next slick-next"><svg class="icon icon-arrow-right"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-right"></use></svg></button>'
       });
 
       slideshow.on('afterChange', function(event, slick, currentSlide) {
