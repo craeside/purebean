@@ -4702,7 +4702,14 @@ select::-ms-expand {
   position: absolute;
   padding: 15px 0;
   background: var(--background);
-  visibility: hidden;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 1px;
+
   opacity: 0;
   transition: opacity 0.2s ease-in-out, visibility 0s 0.2s ease-in-out;
   border: 1px solid var(--border-color);
@@ -4732,6 +4739,12 @@ select::-ms-expand {
 .nav-dropdown__item:focus > .nav-dropdown {
   visibility: visible;
   opacity: 1;
+  clip: none ;
+  clip-path: none;
+  height: auto;
+  white-space: normal;
+  overflow: visible;
+  width: auto;
   transition: opacity 0.2s ease-in-out, visibility 0s ease-in-out;
 }
 
