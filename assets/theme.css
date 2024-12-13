@@ -4714,6 +4714,11 @@ select::-ms-expand {
   white-space: nowrap;
 }
 
+.nav-dropdown__item.header__link {
+  margin-left: 0;
+  display: block;
+}
+
 .nav-dropdown--first {
   top: 100%;
   border-top: 2px solid var(--heading-color);
