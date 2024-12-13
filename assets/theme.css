@@ -4769,7 +4769,7 @@ select::-ms-expand {
 }
 
 .nav-dropdown--first > .nav-dropdown__item:hover > .nav-dropdown__link {
-  color: var(--heading-color);
+  color: var(--accent-color);
 }
 
 .mega-nav {
