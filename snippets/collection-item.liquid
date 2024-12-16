@@ -1,6 +1,6 @@
 {%- assign collection_image = collection.image | default: collection.products.first.featured_image -%}
 
-<a href="{{ collection.url }}" class="collection-item" style="background-image: url({{ collection_image | img_url: '1x1', format: 'pjpg' }})">
+<a href="{{ collection.url }}" alt="{{ collection.description }}" class="collection-item" style="background-image: url({{ collection_image | img_url: '1x1', format: 'pjpg' }})">
   <div class="collection-item__background-image lazyload image--fade-in"
        data-optimumx="1.4"
        data-bgset="{{ collection_image | img_url: '400x' }} 400w, {{ collection_image | img_url: '650x' }} 650w, {{ collection_image | img_url: '850x' }} 850w">
@@ -18,7 +18,7 @@
         <p class="collection-item__description">{{ collection.description | strip_html | truncate: 100 }}</p>
       {%- endif -%}
 
-      <button class="collection-item__button button">{{ 'collections.general.see_more' | t: collection_title: collection.title }}</button>
+      <button aria-label="{{ collection.description }}" class="collection-item__button button">{{ 'collections.general.see_more' | t: collection_title: collection.title }}</button>
     </div>
   </div>
 </a>
