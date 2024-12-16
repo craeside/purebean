@@ -46,33 +46,9 @@
 
 {% schema %}
 {
-  "name": "Text with image grid",
+  "name": "Text with instagram grid",
   "class": "shopify-section__featured-text",
   "settings": [
-    {
-      "type": "image_picker",
-      "id": "image1",
-      "label": "Image1",
-      "info": "600 x 600px jpg recommended"
-    },
-    {
-      "type": "image_picker",
-      "id": "image2",
-      "label": "Image2",
-      "info": "600 x 600px jpg recommended"
-    },
-    {
-      "type": "image_picker",
-      "id": "image3",
-      "label": "Image3",
-      "info": "600 x 600px jpg recommended"
-    },
-    {
-      "type": "text",
-      "id": "title",
-      "label": "Heading",
-      "default": "Your title"
-    },
     {
       "type": "select",
       "id": "title_position",
@@ -90,15 +66,9 @@
       "default": "left"
     },
     {
-      "type": "checkbox",
-      "id": "show_overlay",
-      "label": "Show accent tint on image",
-      "default": true
-    },
-    {
       "type": "text",
       "id": "subheader",
-      "label": "Subheader",
+      "label": "section header",
       "default": "Your title"
     },
     {
@@ -113,21 +83,20 @@
       "label": "Button text"
     },
     {
+      "type": "text",
+      "id": "button_alt_text",
+      "label": "Button alt text"
+    },
+    {
       "type": "url",
       "id": "button_link",
       "label": "Button link"
-    },
-    {
-      "type": "image_picker",
-      "id": "background_image",
-      "label": "Secondary image",
-      "info": "800 x 800px png with transparency recommended - this will be displayed only on large screens."
     }
   ],
   "presets": [
     {
       "category": "Text",
-      "name": "Text with image grid"
+      "name": "Text with instagram grid"
     }
   ]
 }
