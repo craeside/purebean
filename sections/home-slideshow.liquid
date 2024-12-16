@@ -68,7 +68,7 @@
                   <h2 class="slideshow__heading" style="color: {{ block.settings.heading_color }}">{{ block.settings.heading | truncate: 45 }}</h2>
                 {%- endif -%}
 
-                {%- if block.type == 'image' and block.settings.button_text != blank -%}
+                {%- if block.type == 'image' and block.settings.button_text != blank and block.settings.button_alt_text != blank -%}
                   <a alt="{{ block.settings.button_alt_text }}" href="{{ block.settings.link }}" class="slideshow__button button button--secondary">{{ block.settings.button_text }}</a>
                 {%- endif -%}
               </div>
@@ -129,7 +129,11 @@
                   {%- endif -%}
 
                   {%- if block.settings.button_text != blank -%}
-                    <a href="{{ block.settings.link }}" class="fs-slideshow__button button button--primary">{{ block.settings.button_text }}</a>
+                    <a 
+                      {%- if block.settings.button_alt_text != blank -%}
+                        alt="{{ block.settings.button_alt_text }}" 
+                      {%- endif -%}
+                      href="{{ block.settings.link }}" class="fs-slideshow__button button button--primary">{{ block.settings.button_text }}</a>
                   {%- endif -%}
                 </div>
               </div>
