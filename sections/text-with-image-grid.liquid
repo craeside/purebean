@@ -18,7 +18,7 @@
 
           <div class="rte">
             <h2 class="section__title h3">{{ section.settings.subheader }}</h2>
-            {{ section.settings.content }}
+            <p>{{ section.settings.content }}</p>
 
             {%- if section.settings.button_text != blank -%}
               <a href="{{ section.settings.button_link }}" class="box__callout-button button button--primary">{{ section.settings.button_text | escape }}</a>
@@ -68,14 +68,14 @@
     {
       "type": "text",
       "id": "subheader",
-      "label": "section header",
+      "label": "Section header",
       "default": "Your title"
     },
     {
-      "type": "richtext",
+      "type": "text",
       "id": "content",
       "label": "Text",
-      "default": "<p>Add your own custom content to give more information about your store, availability details...</p>"
+      "default": "Add your own custom content to give more information about your store, availability details..."
     },
     {
       "type": "text",
