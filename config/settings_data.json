@@ -389,15 +389,6 @@
           "related_products_image_dimension": "fill_width"
         }
       },
-      "160434729652a628ac": {
-        "type": "instafeed",
-        "settings": {
-          "heading_font": "helvetica_n4",
-          "heading_size": 20,
-          "feed_width": 100,
-          "html_area": ""
-        }
-      },
       "collection-template": {
         "type": "collection-template",
         "settings": {
@@ -423,8 +414,7 @@
       "1603415794376a58ee",
       "16034882062fb96698",
       "collection-list",
-      "1603499442dd903796",
-      "160434729652a628ac"
+      "1603499442dd903796"
     ],
     "blocks": {
       "17824471530847535147": {
