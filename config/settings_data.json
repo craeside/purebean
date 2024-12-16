@@ -305,6 +305,7 @@
           "title": "Featured Coffee's",
           "collection": "featured-coffees",
           "button_text": "Shop all",
+          "button_alt_text": "Shop our featured coffees",
           "button_link": "shopify://collections/featured-coffees",
           "grid_items_per_row": 3,
           "grid_items_count": 3,
