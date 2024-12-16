@@ -407,6 +407,15 @@
           "show_description": true,
           "grid_items_per_row": 3
         }
+      },
+      "160434729652a628ac": {
+        "type": "instafeed",
+        "settings": {
+          "heading_font": "helvetica_n4",
+          "heading_size": 20,
+          "feed_width": 100,
+          "html_area": ""
+        }
       }
     },
     "content_for_index": [
@@ -414,7 +423,8 @@
       "1603415794376a58ee",
       "16034882062fb96698",
       "collection-list",
-      "1603499442dd903796"
+      "1603499442dd903796",
+      "160434729652a628ac"
     ],
     "blocks": {
       "17824471530847535147": {
