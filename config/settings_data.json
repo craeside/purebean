@@ -316,15 +316,11 @@
       "1603499442dd903796": {
         "type": "text-with-image-grid",
         "settings": {
-          "image1": "shopify://shop_images/rooftop-crowd-cheers-for-sun.jpg",
-          "image2": "shopify://shop_images/happy-couple-having-coffee.jpg",
-          "image3": "shopify://shop_images/coffee-date.jpg",
-          "title": "Your title",
           "title_position": "right",
-          "show_overlay": false,
           "subheader": "Our Community",
-          "content": "<p>Our customers love coffee as much as us.</p>",
+          "content": "Our customers love coffee as much as us.",
           "button_text": "See more",
+          "button_alt_text": "Pure bean instagram page",
           "button_link": "https://www.instagram.com/purebeancoffeehouse/"
         }
       },
