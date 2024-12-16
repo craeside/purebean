@@ -18,7 +18,7 @@
 
           <div class="rte">
             <h2 class="section__title h3">{{ section.settings.subheader }}</h2>
-            {{ section.settings.content }}
+            <p>{{ section.settings.content }}</p>
 
             {%- if section.settings.button_text != blank -%}
               <a href="{{ section.settings.button_link }}" class="box__callout-button button button--primary">{{ section.settings.button_text | escape }}</a>
@@ -46,33 +46,9 @@
 
 {% schema %}
 {
-  "name": "Text with image grid",
+  "name": "Text with instagram grid",
   "class": "shopify-section__featured-text",
   "settings": [
-    {
-      "type": "image_picker",
-      "id": "image1",
-      "label": "Image1",
-      "info": "600 x 600px jpg recommended"
-    },
-    {
-      "type": "image_picker",
-      "id": "image2",
-      "label": "Image2",
-      "info": "600 x 600px jpg recommended"
-    },
-    {
-      "type": "image_picker",
-      "id": "image3",
-      "label": "Image3",
-      "info": "600 x 600px jpg recommended"
-    },
-    {
-      "type": "text",
-      "id": "title",
-      "label": "Heading",
-      "default": "Your title"
-    },
     {
       "type": "select",
       "id": "title_position",
@@ -90,22 +66,16 @@
       "default": "left"
     },
     {
-      "type": "checkbox",
-      "id": "show_overlay",
-      "label": "Show accent tint on image",
-      "default": true
-    },
-    {
       "type": "text",
       "id": "subheader",
-      "label": "Subheader",
+      "label": "Section header",
       "default": "Your title"
     },
     {
-      "type": "richtext",
+      "type": "text",
       "id": "content",
       "label": "Text",
-      "default": "<p>Add your own custom content to give more information about your store, availability details...</p>"
+      "default": "Add your own custom content to give more information about your store, availability details..."
     },
     {
       "type": "text",
@@ -113,21 +83,20 @@
       "label": "Button text"
     },
     {
+      "type": "text",
+      "id": "button_alt_text",
+      "label": "Button alt text"
+    },
+    {
       "type": "url",
       "id": "button_link",
       "label": "Button link"
-    },
-    {
-      "type": "image_picker",
-      "id": "background_image",
-      "label": "Secondary image",
-      "info": "800 x 800px png with transparency recommended - this will be displayed only on large screens."
     }
   ],
   "presets": [
     {
       "category": "Text",
-      "name": "Text with image grid"
+      "name": "Text with instagram grid"
     }
   ]
 }

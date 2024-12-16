@@ -4,7 +4,11 @@
     {%- if section.settings.title != blank -%}
       <h2 class="section__title h3">{{ section.settings.title | escape }}</h2>
       {%- if section.settings.button_text != blank -%}
-        <a href="{{ section.settings.button_link }}" class="box__callout-button button button--primary">{{ section.settings.button_text | escape }}</a>
+        <a {{" "}}
+          {%- if section.settings.button_alt_text != blank -%}
+            aria-label="{{ section.settings.button_alt_text }}"
+          {%- endif -%}
+          href="{{ section.settings.button_link }}" class="box__callout-button button button--primary">{{ section.settings.button_text | escape }}</a>
       {%- endif -%}
     {%- endif -%}
   </div>
@@ -67,6 +71,12 @@
       "type": "text",
       "id": "button_text",
       "label": "Button text"
+    },
+    {
+      "type": "text",
+      "id": "button_alt_text",
+      "label": "Button alt text",
+      "info": "Screen readers will read this text instead of the button text."
     },
     {
       "type": "url",

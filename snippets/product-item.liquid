@@ -41,7 +41,7 @@
   {%- endif -%}
 
   <figure class="product-item__image-container">
-    <a href="{{ product.url | within: collection }}" class="product-item__link">
+    <a href="{{ product.url | within: collection }}" alt="{{ product.title }}" class="product-item__link">
       {%- capture supported_sizes-%}{%- render 'image-size', sizes: '200,300,400,600,800,900,1000,1200', image: product.featured_media -%}{%- endcapture -%}
       {%- assign image_url = product.featured_media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
 
@@ -79,7 +79,7 @@
     {%- endif -%}
 
     <h3 class="product-item__title">
-      <a href="{{ product.url | within: collection }}" class="link">{{ product.title }}</a>
+      <a href="{{ product.url | within: collection }}" alt="{{ product.title }}" class="link">{{ product.title }}</a>
     </h3>
 
     {%- if product.compare_at_price > product.price -%}

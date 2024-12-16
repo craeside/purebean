@@ -68,8 +68,8 @@
                   <h2 class="slideshow__heading" style="color: {{ block.settings.heading_color }}">{{ block.settings.heading | truncate: 45 }}</h2>
                 {%- endif -%}
 
-                {%- if block.type == 'image' and block.settings.button_text != blank -%}
-                  <a href="{{ block.settings.link }}" class="slideshow__button button button--secondary">{{ block.settings.button_text }}</a>
+                {%- if block.type == 'image' and block.settings.button_text != blank and block.settings.button_alt_text != blank -%}
+                  <a alt="{{ block.settings.button_alt_text }}" href="{{ block.settings.link }}" class="slideshow__button button button--secondary">{{ block.settings.button_text }}</a>
                 {%- endif -%}
               </div>
 
@@ -129,7 +129,11 @@
                   {%- endif -%}
 
                   {%- if block.settings.button_text != blank -%}
-                    <a href="{{ block.settings.link }}" class="fs-slideshow__button button button--primary">{{ block.settings.button_text }}</a>
+                    <a {{" "}}
+                      {%- if block.settings.button_alt_text != blank -%}
+                        alt="{{ block.settings.button_alt_text }}" 
+                      {%- endif -%}
+                      href="{{ block.settings.link }}" class="fs-slideshow__button button button--primary">{{ block.settings.button_text }}</a>
                   {%- endif -%}
                 </div>
               </div>
@@ -167,12 +171,12 @@
   <div class="slider-static-top" style="background-image: url({{ 'round-coffee-table.jpeg' | asset_url }});">
 
     <p class="slider-static-label">Our Coffee</p>
-    <a href="https://purebean.com/collections/all-coffee" class="slider-static-link">Shop Now</a>
+    <a href="https://purebean.com/collections/all-coffee" class="slider-static-link" alt="Shop all coffees" >Shop Now</a>
     <div class="general-overlay"></div>
   </div>
   <div class="slider-static-bottom" style="background-image: url({{ 'pour-over.jpg' | asset_url }});">
     <p class="slider-static-label">The Goods</p>
-    <a href="https://purebean.com/collections/mugs-more" class="slider-static-link">Shop Now</a>
+    <a href="https://purebean.com/collections/mugs-more" class="slider-static-link" alt="shop all merchandise">Shop Now</a>
     <div class="general-overlay"></div>
   </div>
 </div>
@@ -249,6 +253,12 @@
           "type": "text",
           "id": "button_text",
           "label": "Button text"
+        },
+        {
+          "type": "text",
+          "id": "button_alt_text",
+          "label": "Button alt text",
+          "info": "Screen readers will read this text"
         },
         {
           "type": "url",
