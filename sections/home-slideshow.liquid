@@ -69,7 +69,7 @@
                 {%- endif -%}
 
                 {%- if block.type == 'image' and block.settings.button_text != blank -%}
-                  <a href="{{ block.settings.link }}" class="slideshow__button button button--secondary">{{ block.settings.button_text }}</a>
+                  <a alt="{{ block.settings.button_alt_text }}" href="{{ block.settings.link }}" class="slideshow__button button button--secondary">{{ block.settings.button_text }}</a>
                 {%- endif -%}
               </div>
 
@@ -249,6 +249,12 @@
           "type": "text",
           "id": "button_text",
           "label": "Button text"
+        },
+        {
+          "type": "text",
+          "id": "button_alt_text",
+          "label": "Button alt text",
+          "info": "Screen readers will read this text"
         },
         {
           "type": "url",
