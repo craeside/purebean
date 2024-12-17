@@ -9,7 +9,7 @@
     {%- if section.settings.announcement_link -%}
       <a href="{{ section.settings.announcement_link }}" class="announcement-bar">{{ content }}</a>
     {%- else -%}
-      <section class="announcement-bar" role="banner" alt="announcement banner">{{ content }}</section>
+      <section class="announcement-bar" alt="announcement banner">{{ content }}</section>
     {%- endif -%}
 
     <style>
