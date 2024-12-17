@@ -1075,7 +1075,7 @@
   };
 
   /**
-   * Tgogle the navigation sidebar
+   * Toggle the navigation sidebar
    */
   Plugin.prototype._toggleSidebar = function(event) {
     var self = this;
