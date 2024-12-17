@@ -61,11 +61,11 @@
                  {{ block.shopify_attributes }}>
               <div class="slideshow__content">
                 {%- if block.settings.subheading != blank -%}
-                  <h3 class="slideshow__subheading" style="color: {{ block.settings.heading_color }}">{{ block.settings.subheading | escape }}</h3>
+                  <p class="slideshow__subheading h3" style="color: {{ block.settings.heading_color }}">{{ block.settings.subheading | escape }}</p>
                 {%- endif -%}
 
                 {%- if block.settings.heading != blank -%}
-                  <h2 class="slideshow__heading" style="color: {{ block.settings.heading_color }}">{{ block.settings.heading | truncate: 45 }}</h2>
+                  <p class="slideshow__heading h2" style="color: {{ block.settings.heading_color }}">{{ block.settings.heading | truncate: 45 }}</p>
                 {%- endif -%}
 
                 {%- if block.type == 'image' and block.settings.button_text != blank and block.settings.button_alt_text != blank -%}
@@ -121,11 +121,11 @@
               <div class="fs-slideshow__cover fs-slideshow__cover--{{ block.settings.position }}">
                 <div class="fs-slideshow__content">
                   {%- if block.settings.subheading != blank -%}
-                    <h3 class="fs-slideshow__subheading" style="color: {{ block.settings.heading_color }}">{{ block.settings.subheading | escape }}</h3>
+                    <p class="fs-slideshow__subheading h3" style="color: {{ block.settings.heading_color }}">{{ block.settings.subheading | escape }}</p>
                   {%- endif -%}
 
                   {%- if block.settings.heading != blank -%}
-                    <h2 class="fs-slideshow__heading" style="color: {{ block.settings.heading_color }}">{{ block.settings.heading | escape }}</h2>
+                    <p class="fs-slideshow__heading h2" style="color: {{ block.settings.heading_color }}">{{ block.settings.heading | escape }}</p>
                   {%- endif -%}
 
                   {%- if block.settings.button_text != blank -%}
