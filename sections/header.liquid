@@ -26,7 +26,7 @@
 {%- assign main_menu = linklists[main_menu_handle] -%}
 
 {%- if template.name == 'password' or template.name == 'gift_card' -%}
-  <header class="header header--minimal header--init {% if section.settings.show_tall_header %}header--tall{% endif %}">
+  <div class="header header--minimal header--init {% if section.settings.show_tall_header %}header--tall{% endif %}">
     <div class="container">
       <div class="header__inner">
         {{ header_logo }}
@@ -36,13 +36,13 @@
         {%- endif -%}
       </div>
     </div>
-  </header>
+  </div>
 {%- else -%}
   {%- render 'header-sidebar-nav', main_menu: main_menu -%}
   {%- render 'header-mini-cart' -%}
   {%- render 'header-search' -%}
 
-  <header class="header {% if section.settings.show_tall_header %}header--tall{% endif %} {% if section.settings.logo_position == 'left' %}header--init{% endif %}">
+  <div class="header {% if section.settings.show_tall_header %}header--tall{% endif %} {% if section.settings.logo_position == 'left' %}header--init{% endif %}">
     <div class="container">
       <div class="header__inner">
         <button class="header__nav-toggle hidden-desk" data-action="toggle-mobile-sidebar" aria-label="mobile sidebar toggle">
@@ -92,7 +92,7 @@
         </nav>
       </div>
     </div>
-  </header>
+  </div>
 {%- endif -%}
 
 <style>

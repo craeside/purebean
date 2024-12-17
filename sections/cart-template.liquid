@@ -23,7 +23,7 @@
               <th class="text--uppercase hidden-handheld">{{ 'cart.items.price' | t }}</th>
               <th class="text--uppercase">{{ 'cart.items.quantity' | t }}</th>
               <th class="text--uppercase">{{ 'cart.items.subtotal' | t }}</th>
-              <th></th>
+              <th class="cart-item__hidden-header">Remove</th>
             </tr>
           </thead>
 
@@ -40,9 +40,9 @@
                       <h4 class="cart-item__vendor text--uppercase">{{ line_item.vendor }}</h4>
                     {%- endif -%}
 
-                    <h3 class="cart-item__title h5">
+                    <p class="cart-item__title h5">
                       <a href="{{ line_item.url }}">{{ line_item.product.title }}</a>
-                    </h3>
+                    </p>
 
                     {%- unless line_item.product.has_only_default_variant -%}
                       <ul class="cart-item__variant-options list--unstyled">
@@ -193,7 +193,7 @@
               <div class="cart__instructions grid__cell 1/2--handheld-and-up">
                 <div class="form__control">
                   <label class="form__label" for="note">{{ 'cart.general.add_note' | t }}</label>
-                  <textarea name="note" cols="30" rows="5" class="form__textarea cart__note">{{ cart.note }}</textarea>
+                  <textarea name="note" id="note" cols="30" rows="5" class="form__textarea cart__note">{{ cart.note }}</textarea>
                 </div>
               </div>
             {%- endif -%}
