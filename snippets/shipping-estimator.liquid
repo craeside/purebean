@@ -1,7 +1,7 @@
 <section class="shipping-estimator {% if for_mobile %}shipping-estimator--mobile hidden-handheld-and-up{% else %}hidden-thumb{% endif %}">
-  <h3 class="shipping-estimator__title text--uppercase">
+  <p class="shipping-estimator__title text--uppercase">
     {{ 'cart.shipping_estimator.title' | t }} {%- if for_mobile -%}{%- render 'icon' with 'arrow-bottom' -%}{%- endif -%}
-  </h3>
+  </p>
 
   <div class="shipping-estimator__inner" {% if for_mobile %}style="display: none"{% endif %}>
     <div class="shipping-estimator__form">
