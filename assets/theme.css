@@ -3139,6 +3139,10 @@ h6:last-child {
   margin-top: 14px;
 }
 
+.cart-item__hidden-header {
+  opacity: 0;
+}
+
 @media screen and (max-width: 559px) {
   /* On mobile we basically switch all the table to blocks */
   .cart__items,
