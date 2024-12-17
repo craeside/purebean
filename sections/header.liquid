@@ -24,9 +24,9 @@
 
 {%- assign main_menu_handle = section.settings.navigation_menu | default: 'main-menu' -%}
 {%- assign main_menu = linklists[main_menu_handle] -%}
-{%- section 'announcement' -%}
+
 {%- if template.name == 'password' or template.name == 'gift_card' -%}
-  <header class="header header--minimal header--init {% if section.settings.show_tall_header %}header--tall{% endif %}">
+  <div class="header header--minimal header--init {% if section.settings.show_tall_header %}header--tall{% endif %}">
     <div class="container">
       <div class="header__inner">
         {{ header_logo }}
@@ -36,7 +36,7 @@
         {%- endif -%}
       </div>
     </div>
-  </header>
+  </div>
 {%- else -%}
   {%- render 'header-sidebar-nav', main_menu: main_menu -%}
   {%- render 'header-mini-cart' -%}
