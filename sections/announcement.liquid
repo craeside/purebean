@@ -9,7 +9,7 @@
     {%- if section.settings.announcement_link -%}
       <a href="{{ section.settings.announcement_link }}" class="announcement-bar">{{ content }}</a>
     {%- else -%}
-      <div class="announcement-bar">{{ content }}</div>
+      <div class="announcement-bar" alt="announcement banner">{{ content }}</div>
     {%- endif -%}
 
     <style>
@@ -24,6 +24,7 @@
 {% schema %}
 {
   "name": "Announcement bar",
+  "tag": "section",
   "class": "shopify-section__announcement-bar",
   "settings": [
     {
