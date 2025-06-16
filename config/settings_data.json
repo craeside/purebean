@@ -41,9 +41,9 @@
           "08c8a2cf-f23a-44de-bfdb-f5221fae8939": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/PB-Coffee_Seasonal_Brumal_Bag.jpg",
-              "subheading": "Winter Seasonal",
-              "heading": "Brumal Blend",
+              "image": "shopify://shop_images/PB-Coffee_Seasonal_Talus_Bag.jpg",
+              "subheading": "SUMMER Seasonal",
+              "heading": "TALUS Blend",
               "heading_color": "#f06723",
               "button_text": "Shop Now",
               "button_alt_text": "Shop featured coffees",
@@ -421,14 +421,7 @@
       "collection-list",
       "1603499442dd903796",
       "160434729652a628ac"
-    ],
-    "blocks": {
-      "17824471530847535147": {
-        "type": "shopify://apps/web-accessibility-by-accessibe/blocks/accessiBe/149b77a2-0170-42f6-9355-0bef39587b09",
-        "disabled": false,
-        "settings": {}
-      }
-    }
+    ]
   },
   "presets": {
     "Gold": {
