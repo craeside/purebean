@@ -421,7 +421,14 @@
       "collection-list",
       "1603499442dd903796",
       "160434729652a628ac"
-    ]
+    ],
+    "blocks": {
+      "15614416626742018354": {
+        "type": "shopify://apps/userway-website-accessibility/blocks/uw-widget-extension/bc2d8a34-1a37-451b-ab1a-271bc4e9daa7",
+        "disabled": false,
+        "settings": {}
+      }
+    }
   },
   "presets": {
     "Gold": {
