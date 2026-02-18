@@ -41,13 +41,13 @@
           "08c8a2cf-f23a-44de-bfdb-f5221fae8939": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/PB-Coffee_Seasonal_Southside_Bag.jpg",
-              "subheading": "WINTER Seasonal",
-              "heading": "BRUMAL Blend",
+              "image": "shopify://shop_images/PB-Coffee-Bag_Costa-Rica_Tarrazu_Color.jpg",
+              "subheading": "featured Single orgin",
+              "heading": "costa rica tarrazu",
               "heading_color": "#f06723",
               "button_text": "Shop Now",
               "button_alt_text": "Shop featured coffees",
-              "link": "shopify://collections/featured-coffees",
+              "link": "shopify://products/featured-seasonal-special-rwanda-peaberry",
               "position": "left"
             }
           },
