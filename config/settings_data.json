@@ -54,13 +54,13 @@
           "slideshow-0": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/PB-Coffee_Africa_Yirgacheffe_Dark_Bag_WhiteBG.webp",
+              "image": "shopify://shop_images/PB-Coffee_Seasonal_Pasque_Bag.jpg",
               "subheading": "Spring seasonal",
               "heading": "pasque blend",
               "heading_color": "#f06723",
               "button_text": "Shop Now",
               "button_alt_text": "",
-              "link": "shopify://collections/all",
+              "link": "shopify://products/pasque-blend",
               "position": "left"
             }
           },
