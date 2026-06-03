@@ -54,13 +54,13 @@
           "slideshow-0": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/PB-Coffee_Seasonal_Pasque_Bag.jpg",
-              "subheading": "Spring seasonal",
-              "heading": "pasque blend",
+              "image": "shopify://shop_images/PB-Coffee_Seasonal_Talus_Bag.jpg",
+              "subheading": "Summer seasonal",
+              "heading": "talus blend",
               "heading_color": "#f06723",
               "button_text": "Shop Now",
               "button_alt_text": "",
-              "link": "shopify://products/pasque-blend",
+              "link": "shopify://products/talus-blend-summer-seasonal",
               "position": "left"
             }
           },
