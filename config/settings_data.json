@@ -38,6 +38,19 @@
       "slideshow": {
         "type": "home-slideshow",
         "blocks": {
+          "slideshow-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/PB-Coffee_Seasonal_Southside_Bag.jpg",
+              "subheading": "Fall seasonal",
+              "heading": "Southside blend",
+              "heading_color": "#f06723",
+              "button_text": "Shop Now",
+              "button_alt_text": "",
+              "link": "shopify://products/hearthside-blend",
+              "position": "left"
+            }
+          },
           "08c8a2cf-f23a-44de-bfdb-f5221fae8939": {
             "type": "image",
             "settings": {
@@ -51,29 +64,16 @@
               "position": "left"
             }
           },
-          "slideshow-0": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/PB-Coffee_Seasonal_Southside_Bag.jpg",
-              "subheading": "Fall seasonal",
-              "heading": "Southside blend",
-              "heading_color": "#f06723",
-              "button_text": "Shop Now",
-              "button_alt_text": "",
-              "link": "",
-              "position": "left"
-            }
-          },
           "slideshow-1": {
             "type": "image",
             "settings": {
               "image": "shopify://shop_images/coffee-beans-texture.jpg",
-              "subheading": "442 blend",
-              "heading": "ethi0pia, colombia, png",
+              "subheading": "Pronghorn blend",
+              "heading": "Mexico & Ethiopia",
               "heading_color": "#ffffff",
               "button_text": "Shop Now",
-              "button_alt_text": "Shop 442 blend",
-              "link": "shopify://products/442-blend",
+              "button_alt_text": "Shop Pronghorn Blend",
+              "link": "shopify://products/pronghorn-blend",
               "position": "left"
             }
           },
@@ -81,19 +81,19 @@
             "type": "image",
             "settings": {
               "image": "shopify://shop_images/coffee-beans-from-above.jpg",
-              "subheading": "FIRESIDE Blend",
-              "heading": "PNG & ethiopia",
+              "subheading": "Golden Bear Blend",
+              "heading": "ETHOPIA, MEXICO & COLOMBIA",
               "heading_color": "#ffffff",
               "button_text": "Shop Now",
-              "button_alt_text": "Shop fireside blend",
-              "link": "shopify://products/fireside-blend",
+              "button_alt_text": "Shop Golden Bear blend",
+              "link": "shopify://products/prairie-blend",
               "position": "left"
             }
           }
         },
         "block_order": [
-          "08c8a2cf-f23a-44de-bfdb-f5221fae8939",
           "slideshow-0",
+          "08c8a2cf-f23a-44de-bfdb-f5221fae8939",
           "slideshow-1",
           "829ddb30-a8cb-484c-bf2a-58c55127a72a"
         ],
